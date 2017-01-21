@@ -25,7 +25,7 @@ public class SpaceToMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		isGrounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
+		isGrounded = Physics.Raycast(transform.position+Vector3.up*0.2f, -Vector3.up, 0.75f);
 		if (moveTimer < 0f && isGrounded && moveHit) {
 			float power = Mathf.Max((powerTimer/maxPower), 0.3f);
 			moveTimer = 0.3f;
