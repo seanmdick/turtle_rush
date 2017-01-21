@@ -7,6 +7,7 @@ public class SpaceToMove : MonoBehaviour {
 	private Rigidbody rb;
 	public float offset;
 	public float mag, flipMag, maxPower;
+	public ParticleSystem ps;
 
 	private bool isGrounded, moveHit;
 	// Use this for initialization
@@ -35,6 +36,7 @@ public class SpaceToMove : MonoBehaviour {
 				rb.AddForceAtPosition((-transform.up*0.1f) * flipMag * power, transform.position + transform.right * direction * offset, ForceMode.Impulse);
 			} else {
 				direction = -direction;
+				ps.Emit(2);
 				rb.AddForceAtPosition((transform.forward + transform.up*0.1f) * mag * power, transform.position + transform.forward + transform.right * direction * offset, ForceMode.Impulse);
 			}
 			powerTimer = 0f;
