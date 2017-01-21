@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\FollowPointLookAtPlayer.cs" />
      <Compile Include="Assets\Scripts\SpaceToMove.cs" />
      <Compile Include="Assets\ScrollTexture.cs" />
+     <Compile Include="Assets\Turtle.cs" />
      <Compile Include="Assets\bobUpAndDown.cs" />
      <None Include="Assets\Ocean.shader" />
  <Reference Include="UnityEngine.UI">
