@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -19,3 +20,40 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+=======
+# ===========================
+# Default Collab Ignore Rules
+# ===========================
+
+# OS Generated
+# ============
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Visual Studio / MonoDevelop generated
+# =====================================
+[Ee]xported[Oo]bj/
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# Unity generated
+# ===============
+/[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+>>>>>>> Stashed changes
