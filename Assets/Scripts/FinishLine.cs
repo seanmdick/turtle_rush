@@ -33,7 +33,13 @@ public class FinishLine : MonoBehaviour {
 		}
 	}
 
+	string formatTime(float time) {
+		string minutes = Mathf.Floor(time/60).ToString("00");
+		string seconds = Mathf.Floor(time % 60).ToString("00");
+		return minutes + ":" + seconds;
+	}
+
 	void GameOver() {
-		Debug.Log("Game Over MAAAAAN!");
+		
 	}
 }
