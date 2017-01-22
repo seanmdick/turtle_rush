@@ -12,7 +12,7 @@ public class FollowPointLookAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.Lerp(transform.position, lookTarget.position + targetOffset, Time.deltaTime);
-		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Vector3.Normalize(lookTarget.position+Vector3.up- transform.position)), Time.deltaTime);
+		transform.position = Vector3.Lerp(transform.position, lookTarget.position + targetOffset, Time.smoothDeltaTime);
+		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Vector3.Normalize(lookTarget.position+Vector3.up- transform.position)), Time.smoothDeltaTime);
 	}
 }
