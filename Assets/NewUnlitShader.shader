@@ -8,7 +8,7 @@
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags { "RenderType"="Transparent" }
 		LOD 100
 		Blend SrcAlpha OneMinusSrcAlpha
 		Pass
@@ -18,7 +18,9 @@
 			#pragma fragment frag
 			// make fog work
 			#pragma multi_compile_fog
-			
+
+			#pragma multi_compile_instancing
+
 			#include "UnityCG.cginc"
 
 			struct appdata
@@ -36,9 +38,12 @@
 
 			sampler2D _MainTex;
 			sampler2D _RevealTex;
-			float _RevealAmount;
 			float4 _MainTex_ST;
-			
+
+			UNITY_INSTANCING_CBUFFER_START(Props)
+				UNITY_DEFINE_INSTANCED_PROP(float, _RevealAmount)	// Make _RevealAmount an instanced property
+			UNITY_INSTANCING_CBUFFER_END
+
 			v2f vert (appdata v)
 			{
 				v2f o;
@@ -55,7 +60,7 @@
 				fixed4 revealCol = tex2D(_RevealTex, i.uv);
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);
-				col.a = min(col.a, (_RevealAmount - revealCol));
+				col.a = min(col.a, (UNITY_ACCESS_INSTANCED_PROP(_RevealAmount) - revealCol));
 				return col;
 			}
 			ENDCG

@@ -118,7 +118,8 @@ ModelImporter:
     4300008: R_Top_Pincher
     4300010: R_Eyebrow
     4300012: L_Eyebrow
-    7400000: Take 001
+    7400000: Moving
+    7400002: Idle
     9500000: //RootNode
     13700000: Body
     13700002: L_Bottom_Piincher
@@ -149,10 +150,144 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Moving
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/Eyebrows
+        weight: 1
+      - path: Body/Eyebrows/L_Eyebrow
+        weight: 1
+      - path: Body/Eyebrows/R_Eyebrow
+        weight: 1
+      - path: Body/L_Pincher
+        weight: 1
+      - path: Body/L_Pincher/L_Bottom_Piincher
+        weight: 1
+      - path: Body/L_Pincher/L_Top_Pincher
+        weight: 1
+      - path: Body/R_Pincher
+        weight: 1
+      - path: Body/R_Pincher/R_Bottom_Pincher
+        weight: 1
+      - path: Body/R_Pincher/R_Top_Pincher
+        weight: 1
+      - path: Root_Cont
+        weight: 1
+      - path: Root_Cont/Root
+        weight: 1
+      - path: Root_Cont/Root/Butt
+        weight: 1
+      - path: Root_Cont/Root/Butt/Tail
+        weight: 1
+      - path: Root_Cont/Root/L_Hip
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1/L_Knee_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1/L_Knee_1/L_Foot_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2/L_Knee_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2/L_Knee_2/L_Foot_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3/L_Knee_3
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3/L_Knee_3/L_Foot_3
+        weight: 1
+      - path: Root_Cont/Root/L_Shoulder
+        weight: 1
+      - path: Root_Cont/Root/Neck
+        weight: 1
+      - path: Root_Cont/Root/Neck/Head
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Bottom_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Bottom_Knuckle/L_Bottom_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Top_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Top_Knuckle/L_Top_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Bottom_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Bottom_Knuckle/R_Bottom_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Top_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Top_Knuckle/R_Top_Tip
+        weight: 1
+      - path: Root_Cont/Root/R_Hip
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1/R_Knee_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1/R_Knee_1/R_Foot_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2/R_Knee_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2/R_Knee_2/R_Foot_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3/R_Knee_3
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3/R_Knee_3/R_Foot_3
+        weight: 1
+      - path: Root_Cont/Root/R_Shoulder
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 62
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

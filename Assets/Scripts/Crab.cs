@@ -3,30 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Crab : MonoBehaviour {
-	private Vector3 moveTarget, idleMoveLoc;
-	private bool hasTarget;
+	public Vector3 moveTarget, idleMoveLoc;
+	public bool hasTarget;
 	public float minDistance, speed, maxAttackCooldown, crabColSphere, idleMoveDelay;
 	public LayerMask layM;
 	public LayerMask ground;
 	private float attackCooldown;
 	public CrabZone cz;
+	private Animator aC;
+
 	// Use this for initialization
 	void Start () {
-		
+		aC = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		attackCooldown -= Time.fixedDeltaTime;
 		idleMoveDelay -= Time.fixedDeltaTime;
-		fixToGround();
+
 		if (hasTarget) {
+			aC.SetBool("Walking", true);
 			moveTowardsTarget();
 		} else {
 			if(idleMoveDelay < 0f) {
 				idleMove();
+				aC.SetBool("Walking", true);
+			} else {
+				aC.SetBool("Walking", false);
 			}
 		}
+		fixToGround();
 	}
 
 	void idleMove(){
@@ -40,15 +47,16 @@ public class Crab : MonoBehaviour {
 	}
 
 	float distanceToLoc(){
-		return Vector3.Distance(idleMoveLoc, transform.position);
+		return Vector3.Distance(moveTarget, transform.position);
 	}
 
 	void fixToGround(){
 		RaycastHit hit; 
-		Physics.Raycast(transform.position + Vector3.up, -Vector3.up, out hit, Mathf.Infinity, ground);
+		Physics.Raycast(transform.position + Vector3.up*100f, -Vector3.up, out hit, Mathf.Infinity, ground);
 		Vector3 currPos = transform.position;
 		currPos.y = hit.point.y;
 		transform.position = currPos;
+//		transform.up = Vector3.Lerp(transform.up, hit.normal, Time.fixedDeltaTime*3f);
 	}
 
 	public void SetTarget(Vector3 target){
@@ -61,12 +69,11 @@ public class Crab : MonoBehaviour {
 		if (attackCooldown > 0f) return;
 		Vector3 direction = moveTarget - transform.position;
 		direction.y = 0;
-		float zMove = moveTarget.z - transform.position.z;
-		float xMove = moveTarget.x - transform.position.x;
+
 		transform.Translate(direction.normalized * Time.fixedDeltaTime * speed, Space.World);
 
 		// Reached turtle rest then chase again
-		if (Vector3.Distance(transform.position, moveTarget) < minDistance && attackCooldown < 0f){
+		if (Vector3.Distance(transform.position, moveTarget) < minDistance/2 && attackCooldown < 0f){
 			// check for hitting turtle
 			Collider[] hitColliders = Physics.OverlapSphere(transform.position, crabColSphere, layM);
 			if (hitColliders.Length > 0){
@@ -75,11 +82,7 @@ public class Crab : MonoBehaviour {
 			hasTarget = false;
 			moveToOrigin();
 		} else {
-			transform.rotation = Quaternion.Slerp(
-				transform.rotation, 
-				Quaternion.LookRotation(Vector3.Normalize(direction)), 
-				Time.fixedDeltaTime * 10
-			);
+			transform.right = Vector3.Lerp(transform.right, direction, Time.fixedDeltaTime * 5f);
 		}
 	}
 	

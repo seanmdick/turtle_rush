@@ -46,16 +46,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FlyInACircle.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\CombineMeshes.cs" />
      <Compile Include="Assets\Scripts\Crab.cs" />
      <Compile Include="Assets\Scripts\CrabZone.cs" />
+     <Compile Include="Assets\Scripts\FinishLine.cs" />
+     <Compile Include="Assets\Scripts\FlyInACircle.cs" />
      <Compile Include="Assets\Scripts\FollowPointLookAtPlayer.cs" />
+     <Compile Include="Assets\Scripts\Jaws.cs" />
+     <Compile Include="Assets\Scripts\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\PlayerProgress.cs" />
+     <Compile Include="Assets\Scripts\ScrollTexture.cs" />
+     <Compile Include="Assets\Scripts\Seagull.cs" />
      <Compile Include="Assets\Scripts\SpaceToMove.cs" />
-     <Compile Include="Assets\ScrollTexture.cs" />
-     <Compile Include="Assets\Seagull.cs" />
-     <Compile Include="Assets\Turtle.cs" />
-     <Compile Include="Assets\bobUpAndDown.cs" />
+     <Compile Include="Assets\Scripts\Turtle.cs" />
+     <Compile Include="Assets\Scripts\bobUpAndDown.cs" />
      <None Include="Assets\NewUnlitShader.shader" />
      <None Include="Assets\Ocean.shader" />
      <None Include="Assets\Scripts\TurtleShader.shader" />
