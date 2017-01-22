@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Crab : MonoBehaviour {
-	private Vector3 moveTarget;
+	private Vector3 moveTarget, idleMoveLoc;
 	private bool hasTarget;
-	public float minDistance, speed, maxAttackCooldown, crabColSphere;
+	public float minDistance, speed, maxAttackCooldown, crabColSphere, idleMoveDelay;
 	public LayerMask layM;
 	public LayerMask ground;
 	private float attackCooldown;
+	public CrabZone cz;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,10 +18,29 @@ public class Crab : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		attackCooldown -= Time.fixedDeltaTime;
+		idleMoveDelay -= Time.fixedDeltaTime;
 		fixToGround();
 		if (hasTarget) {
-			moveTowardsTurtle();
+			moveTowardsTarget();
+		} else {
+			if(idleMoveDelay < 0f) {
+				idleMove();
+			}
 		}
+	}
+
+	void idleMove(){
+		if (distanceToLoc() > minDistance && idleMoveLoc != Vector3.zero){
+			moveTowardsTarget();
+		} else {
+			idleMoveLoc = cz.RandLoc();
+			moveTarget = idleMoveLoc;
+			idleMoveDelay = Random.Range(1f,4f);
+		}
+	}
+
+	float distanceToLoc(){
+		return Vector3.Distance(idleMoveLoc, transform.position);
 	}
 
 	void fixToGround(){
@@ -37,8 +57,8 @@ public class Crab : MonoBehaviour {
 		moveTarget = target;
 	}
 	
-	void moveTowardsTurtle(){
-		if (!hasTarget || attackCooldown > 0f) return;
+	void moveTowardsTarget(){
+		if (attackCooldown > 0f) return;
 		Vector3 direction = moveTarget - transform.position;
 		direction.y = 0;
 		float zMove = moveTarget.z - transform.position.z;
@@ -47,22 +67,29 @@ public class Crab : MonoBehaviour {
 
 		// Reached turtle rest then chase again
 		if (Vector3.Distance(transform.position, moveTarget) < minDistance && attackCooldown < 0f){
-			attackCooldown = maxAttackCooldown;
 			// check for hitting turtle
 			Collider[] hitColliders = Physics.OverlapSphere(transform.position, crabColSphere, layM);
 			if (hitColliders.Length > 0){
 				turtleHit(hitColliders[0]);
 			}
+			hasTarget = false;
+			moveToOrigin();
 		} else {
 			transform.rotation = Quaternion.Slerp(
 				transform.rotation, 
 				Quaternion.LookRotation(Vector3.Normalize(direction)), 
-				Time.fixedDeltaTime
+				Time.fixedDeltaTime * 10
 			);
 		}
 	}
+	
+	void moveToOrigin(){
+		moveTarget = cz.transform.position;
+		idleMoveLoc = cz.transform.position;
+	}
 
 	void turtleHit(Collider col){
+		attackCooldown = maxAttackCooldown;
 		col.attachedRigidbody.AddForce(transform.forward * 10, ForceMode.Impulse);
 	}
 }

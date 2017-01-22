@@ -22,4 +22,15 @@ public class CrabZone : MonoBehaviour {
 		}
 	}
 
+	public Vector3 RandLoc() {
+		BoxCollider bc = transform.GetComponent<BoxCollider>();
+		float width = bc.bounds.size.x / 2;
+		float depth = bc.bounds.size.z / 2;
+		Vector3 randl = transform.position; 
+		randl.x = transform.position.x + Random.Range(-width, width);
+		randl.z = transform.position.z + Random.Range(-depth, depth);
+		randl.y = 0;
+		return randl;
+	} 
+
 }
