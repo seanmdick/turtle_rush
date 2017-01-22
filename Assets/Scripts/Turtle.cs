@@ -14,6 +14,9 @@ public class Turtle : MonoBehaviour {
 		
 	}
 
-	public void finishedRace() {
+	public void finishedRace(int place) {
+		SpaceToMove pc = GetComponent<SpaceToMove>();
+		if (pc != null)
+			pc.finishRace(place);
 	}
 }

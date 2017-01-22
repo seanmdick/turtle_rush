@@ -84,6 +84,10 @@ public class SpaceToMove : MonoBehaviour {
 
 	}
 
+	public void finishRace(int place) {
+		finished = true;
+	}
+
 	public void Respawn() {
 		finished = false;
 		GameObject spawnGo = GameObject.FindGameObjectWithTag(SpawnTagName);

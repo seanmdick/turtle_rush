@@ -22,7 +22,7 @@ public class FinishLine : MonoBehaviour {
 			if (!finishOrder.Contains(t.playerNumber)) {
 				finishOrder.Add(t.playerNumber);
 				finishTimes.Add(Time.timeSinceLevelLoad);
-				t.finishedRace();
+				t.finishedRace(finishOrder.IndexOf(t.playerNumber) + 1);
 				if (finishOrder.Count > 1)
 					jaws.dundun();
 			}
