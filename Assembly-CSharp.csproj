@@ -46,6 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\EventSystemChecker.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\Pause.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\PlayMusic.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\QuitApplication.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\SetAudioLevels.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\ShowPanels.cs" />
+     <Compile Include="Assets\Prefabs\Game Jam Template\Scripts\StartOptions.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\CombineMeshes.cs" />
      <Compile Include="Assets\Scripts\Crab.cs" />
@@ -53,6 +61,7 @@
      <Compile Include="Assets\Scripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\FlyInACircle.cs" />
      <Compile Include="Assets\Scripts\FollowPointLookAtPlayer.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Jaws.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\PlayerProgress.cs" />
@@ -63,7 +72,9 @@
      <Compile Include="Assets\Scripts\bobUpAndDown.cs" />
      <None Include="Assets\NewUnlitShader.shader" />
      <None Include="Assets\Ocean.shader" />
+     <None Include="Assets\Prefabs\Game Jam Template\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Scripts\TurtleShader.shader" />
+     <None Include="Assets\Prefabs\Game Jam Template\GameJamTemplateReadMe.txt" />
      <None Include="Assets\Images\TurtleShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
