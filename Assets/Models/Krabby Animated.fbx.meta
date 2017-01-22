@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: bd6a10ccc52974b3789b5c84f7db0a27
+timeCreated: 1485058257
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Butt
+    100004: Eyebrows
+    100006: Head
+    100008: //RootNode
+    100010: L_Arm
+    100012: L_Bottom_Knuckle
+    100014: L_Bottom_Piincher
+    100016: L_Bottom_Tip
+    100018: L_Elbow
+    100020: L_Eyebrow
+    100022: L_Foot_1
+    100024: L_Foot_2
+    100026: L_Foot_3
+    100028: L_Hip
+    100030: L_Knee_1
+    100032: L_Knee_2
+    100034: L_Knee_3
+    100036: L_Leg_1
+    100038: L_Leg_2
+    100040: L_Leg_3
+    100042: L_Pincher
+    100044: L_Pincher 1
+    100046: L_Shoulder
+    100048: L_Top_Knuckle
+    100050: L_Top_Pincher
+    100052: L_Top_Tip
+    100054: Neck
+    100056: R_Arm
+    100058: R_Bottom_Knuckle
+    100060: R_Bottom_Pincher
+    100062: R_Bottom_Tip
+    100064: R_Elbow
+    100066: R_Eyebrow
+    100068: R_Foot_1
+    100070: R_Foot_2
+    100072: R_Foot_3
+    100074: R_Hip
+    100076: R_Knee_1
+    100078: R_Knee_2
+    100080: R_Knee_3
+    100082: R_Leg_1
+    100084: R_Leg_2
+    100086: R_Leg_3
+    100088: R_Pincher
+    100090: R_Pincher 1
+    100092: R_Shoulder
+    100094: R_Top_Knuckle
+    100096: R_Top_Pincher
+    100098: R_Top_Tip
+    100100: Root
+    100102: Root_Cont
+    100104: Tail
+    400000: Body
+    400002: Butt
+    400004: Eyebrows
+    400006: Head
+    400008: //RootNode
+    400010: L_Arm
+    400012: L_Bottom_Knuckle
+    400014: L_Bottom_Piincher
+    400016: L_Bottom_Tip
+    400018: L_Elbow
+    400020: L_Eyebrow
+    400022: L_Foot_1
+    400024: L_Foot_2
+    400026: L_Foot_3
+    400028: L_Hip
+    400030: L_Knee_1
+    400032: L_Knee_2
+    400034: L_Knee_3
+    400036: L_Leg_1
+    400038: L_Leg_2
+    400040: L_Leg_3
+    400042: L_Pincher
+    400044: L_Pincher 1
+    400046: L_Shoulder
+    400048: L_Top_Knuckle
+    400050: L_Top_Pincher
+    400052: L_Top_Tip
+    400054: Neck
+    400056: R_Arm
+    400058: R_Bottom_Knuckle
+    400060: R_Bottom_Pincher
+    400062: R_Bottom_Tip
+    400064: R_Elbow
+    400066: R_Eyebrow
+    400068: R_Foot_1
+    400070: R_Foot_2
+    400072: R_Foot_3
+    400074: R_Hip
+    400076: R_Knee_1
+    400078: R_Knee_2
+    400080: R_Knee_3
+    400082: R_Leg_1
+    400084: R_Leg_2
+    400086: R_Leg_3
+    400088: R_Pincher
+    400090: R_Pincher 1
+    400092: R_Shoulder
+    400094: R_Top_Knuckle
+    400096: R_Top_Pincher
+    400098: R_Top_Tip
+    400100: Root
+    400102: Root_Cont
+    400104: Tail
+    4300000: Body
+    4300002: L_Bottom_Piincher
+    4300004: L_Top_Pincher
+    4300006: R_Bottom_Pincher
+    4300008: R_Top_Pincher
+    4300010: R_Eyebrow
+    4300012: L_Eyebrow
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: L_Bottom_Piincher
+    13700004: L_Eyebrow
+    13700006: L_Top_Pincher
+    13700008: R_Bottom_Pincher
+    13700010: R_Eyebrow
+    13700012: R_Top_Pincher
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/Eyebrows
+        weight: 1
+      - path: Body/Eyebrows/L_Eyebrow
+        weight: 1
+      - path: Body/Eyebrows/R_Eyebrow
+        weight: 1
+      - path: Body/L_Pincher
+        weight: 1
+      - path: Body/L_Pincher/L_Bottom_Piincher
+        weight: 1
+      - path: Body/L_Pincher/L_Top_Pincher
+        weight: 1
+      - path: Body/R_Pincher
+        weight: 1
+      - path: Body/R_Pincher/R_Bottom_Pincher
+        weight: 1
+      - path: Body/R_Pincher/R_Top_Pincher
+        weight: 1
+      - path: Root_Cont
+        weight: 1
+      - path: Root_Cont/Root
+        weight: 1
+      - path: Root_Cont/Root/Butt
+        weight: 1
+      - path: Root_Cont/Root/Butt/Tail
+        weight: 1
+      - path: Root_Cont/Root/L_Hip
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1/L_Knee_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_1/L_Knee_1/L_Foot_1
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2/L_Knee_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_2/L_Knee_2/L_Foot_2
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3/L_Knee_3
+        weight: 1
+      - path: Root_Cont/Root/L_Leg_3/L_Knee_3/L_Foot_3
+        weight: 1
+      - path: Root_Cont/Root/L_Shoulder
+        weight: 1
+      - path: Root_Cont/Root/Neck
+        weight: 1
+      - path: Root_Cont/Root/Neck/Head
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Bottom_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Bottom_Knuckle/L_Bottom_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Top_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/L_Arm/L_Elbow/L_Pincher 1/L_Top_Knuckle/L_Top_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Bottom_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Bottom_Knuckle/R_Bottom_Tip
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Top_Knuckle
+        weight: 1
+      - path: Root_Cont/Root/Neck/R_Arm/R_Elbow/R_Pincher 1/R_Top_Knuckle/R_Top_Tip
+        weight: 1
+      - path: Root_Cont/Root/R_Hip
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1/R_Knee_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_1/R_Knee_1/R_Foot_1
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2/R_Knee_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_2/R_Knee_2/R_Foot_2
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3/R_Knee_3
+        weight: 1
+      - path: Root_Cont/Root/R_Leg_3/R_Knee_3/R_Foot_3
+        weight: 1
+      - path: Root_Cont/Root/R_Shoulder
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

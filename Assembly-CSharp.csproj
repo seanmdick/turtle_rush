@@ -56,7 +56,9 @@
      <Compile Include="Assets\Seagull.cs" />
      <Compile Include="Assets\Turtle.cs" />
      <Compile Include="Assets\bobUpAndDown.cs" />
+     <None Include="Assets\NewUnlitShader.shader" />
      <None Include="Assets\Ocean.shader" />
+     <None Include="Assets\Scripts\TurtleShader.shader" />
      <None Include="Assets\Images\TurtleShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

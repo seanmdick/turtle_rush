@@ -13,6 +13,9 @@ public class SpaceToMove : MonoBehaviour {
 	public AudioClip[] grunts;
 	public AudioClip[] heavyGrunts;
 	private bool isGrounded, moveHit;
+	public RectTransform directionIndicator;
+	public Material powerIndicatorMat;
+	public KeyCode moveKey;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -20,11 +23,13 @@ public class SpaceToMove : MonoBehaviour {
 
 	void Update() {
 		moveTimer -= Time.deltaTime;
-		if (Input.GetKey(KeyCode.Space)) {
+		if (Input.GetKey(moveKey)) {
 			powerTimer = Mathf.Min(powerTimer + Time.deltaTime, maxPower);
 		}
-
-		if (Input.GetKeyUp(KeyCode.Space))
+		powerIndicatorMat.SetFloat("_RevealAmount", (powerTimer/maxPower)*2f);
+		direction = Mathf.Sin(Time.time*4f);
+		directionIndicator.localRotation = Quaternion.Euler(0f,0f, direction * 45f);
+		if (Input.GetKeyUp(moveKey))
 			moveHit = true;
 	}
 	
@@ -32,6 +37,7 @@ public class SpaceToMove : MonoBehaviour {
 	void FixedUpdate () {
 		isGrounded = Physics.Raycast(transform.position+Vector3.up*0.2f, -Vector3.up, 0.75f);
 		if (moveTimer < 0f && isGrounded && moveHit) {
+			powerIndicatorMat.SetFloat("_RevealAmount", 0f);
 			float power = Mathf.Max((powerTimer/maxPower), 0.3f);
 			moveTimer = 0.3f;
 			moveHit = false;
@@ -41,7 +47,7 @@ public class SpaceToMove : MonoBehaviour {
 				AudioManager.Instance.Play(heavyGrunts[Random.Range(0, heavyGrunts.Length)], 1.5f+ Random.Range(-0.3f, 0.3f));
 				rb.AddForceAtPosition((-transform.up*0.1f) * flipMag * power, transform.position + transform.right * direction * offset, ForceMode.Impulse);
 			} else {
-				direction = -direction;
+//				direction = -direction;
 				ps.Emit(2);
 //				if (Random.value > 0.6f)
 				if (power > 0.6f)
