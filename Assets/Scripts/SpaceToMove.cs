@@ -23,6 +23,7 @@ public class SpaceToMove : MonoBehaviour {
 	public Color shellColor;
 	private Vector3 spawnPosition;
 	private bool finished;
+	private int playerNumber;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -36,14 +37,14 @@ public class SpaceToMove : MonoBehaviour {
 		} else {
 			spawnPosition = transform.position;
 		}
-
+		playerNumber = GetComponent<Turtle>().playerNumber;
 	}
 
 	void Update() {
 		if (finished)
 			return;
 		moveTimer -= Time.deltaTime;
-		if (Input.GetKey(moveKey)) {
+		if (Input.GetKey(moveKey) || Input.GetButton("P"+playerNumber+"move")) {
 			powerTimer = Mathf.Min(powerTimer + Time.deltaTime, maxPower);
 		}
 		if (powerIndicatorMat != null)
@@ -52,7 +53,7 @@ public class SpaceToMove : MonoBehaviour {
 
 		if (directionIndicator != null)
 			directionIndicator.localRotation = Quaternion.Euler(0f,0f, direction * 45f);
-		if (Input.GetKeyUp(moveKey))
+		if (Input.GetKeyUp(moveKey) || Input.GetButtonUp("P"+playerNumber+"move"))
 			moveHit = true;
 	}
 	
