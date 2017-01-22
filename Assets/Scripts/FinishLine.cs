@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour {
 	public List<int> finishOrder;
 	public Jaws jaws;
 	public List<float> finishTimes;
 	private int numTurtles;
+	private bool alreadyDone;
 	// Use this for initialization
 	void Start () {
 		numTurtles = GameObject.FindObjectsOfType<Turtle>().Length;
@@ -43,6 +45,9 @@ public class FinishLine : MonoBehaviour {
 
 
 	void GameOver() {
-		
+		if (alreadyDone)
+			return;
+		alreadyDone = true;
+		SceneManager.LoadScene("GameFinished", LoadSceneMode.Additive);
 	}
 }

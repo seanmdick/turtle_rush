@@ -9,9 +9,11 @@ public class GameFinished : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		fl = GameObject.FindObjectOfType<FinishLine>();
+		string output = "Results:\r\n";
 		for (int i = 0; i < fl.finishOrder.Count; i++){
-			gameObject.GetComponent<Text>().text += $"{fl.finishOrder[i]} {formatTime(fl.finishTimes[i])}";
+			output += $"\t#{i+1} P{fl.finishOrder[i]} - {formatTime(fl.finishTimes[i])}\r\n";
 		} 
+		gameObject.GetComponent<Text>().text = output;
 	}
 
 	string formatTime(float time) {

@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\FlyInACircle.cs" />
      <Compile Include="Assets\Scripts\FollowPointLookAtPlayer.cs" />
+     <Compile Include="Assets\Scripts\GameFinished.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Jaws.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
