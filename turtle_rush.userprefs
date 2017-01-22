@@ -1,15 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FinishLine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameFinished.cs">
     <Files>
       <File FileName="Assets/Scripts/SpaceToMove.cs" Line="56" Column="71" />
       <File FileName="Assets/Scripts/FollowPointLookAtPlayer.cs" Line="17" Column="38" />
       <File FileName="Assets/Scripts/Crab.cs" Line="76" Column="71" />
       <File FileName="Assets/Scripts/CrabZone.cs" Line="33" Column="57" />
-      <File FileName="Assets/Scripts/FinishLine.cs" Line="42" Column="2" />
+      <File FileName="Assets/Scripts/FinishLine.cs" Line="48" Column="7" />
       <File FileName="Assets/Scripts/Jaws.cs" Line="28" Column="18" />
       <File FileName="Assets/Scripts/Turtle.cs" Line="20" Column="25" />
-      <File FileName="Assets/Scripts/LoadLevel.cs" Line="20" Column="26" />
+      <File FileName="Assets/Scripts/LoadLevel.cs" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/GameFinished.cs" Line="14" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

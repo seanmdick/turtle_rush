@@ -5,8 +5,6 @@ Project("{4B832F99-0F03-DB0B-D16A-C3F51311AC52}") = "turtle_rush", "Assembly-CSh
 EndProject
 Project("{4B832F99-0F03-DB0B-D16A-C3F51311AC52}") = "turtle_rush", "Assembly-CSharp.csproj", "{FFE8F8C1-D9CB-D309-A484-23BD4C807CCF}"
 EndProject
-Project("{4B832F99-0F03-DB0B-D16A-C3F51311AC52}") = "turtle_rush", "Assembly-CSharp-Editor-firstpass.csproj", "{DD88C102-1E36-D928-F4F5-D18E2BE2C1B7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{FFE8F8C1-D9CB-D309-A484-23BD4C807CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE8F8C1-D9CB-D309-A484-23BD4C807CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE8F8C1-D9CB-D309-A484-23BD4C807CCF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD88C102-1E36-D928-F4F5-D18E2BE2C1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD88C102-1E36-D928-F4F5-D18E2BE2C1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD88C102-1E36-D928-F4F5-D18E2BE2C1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD88C102-1E36-D928-F4F5-D18E2BE2C1B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
