@@ -39,6 +39,9 @@ public class FinishLine : MonoBehaviour {
 		return minutes + ":" + seconds;
 	}
 
+
+
+
 	void GameOver() {
 		
 	}

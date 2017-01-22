@@ -44,7 +44,7 @@ public class SpaceToMove : MonoBehaviour {
 		if (finished)
 			return;
 		moveTimer -= Time.deltaTime;
-		if (Input.GetKey(moveKey) || Input.GetButton("P"+playerNumber+"move")) {
+		if (Input.GetKey(moveKey) || Input.GetButton("P"+playerNumber+"Move")) {
 			powerTimer = Mathf.Min(powerTimer + Time.deltaTime, maxPower);
 		}
 		if (powerIndicatorMat != null)
@@ -53,7 +53,7 @@ public class SpaceToMove : MonoBehaviour {
 
 		if (directionIndicator != null)
 			directionIndicator.localRotation = Quaternion.Euler(0f,0f, direction * 45f);
-		if (Input.GetKeyUp(moveKey) || Input.GetButtonUp("P"+playerNumber+"move"))
+		if (Input.GetKeyUp(moveKey) || Input.GetButtonUp("P"+playerNumber+"Move"))
 			moveHit = true;
 	}
 	
