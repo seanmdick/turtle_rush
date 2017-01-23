@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Pause : MonoBehaviour {
@@ -33,6 +34,13 @@ public class Pause : MonoBehaviour {
 			UnPause ();
 		}
 	
+	}
+
+	public void DoRestart()
+	{
+		SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+		GameObject.Destroy(gameObject);
+		SceneManager.LoadScene("MainMenu");
 	}
 
 

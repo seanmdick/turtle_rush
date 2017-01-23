@@ -57,17 +57,23 @@ public class ShowPanels : MonoBehaviour {
 		menuButtons.SetActive (true);
 	}
 
+	public void ShowMainMenuButtons(){
+		menuButtons.SetActive (true);
+	}
+
+	public void HideMainMenuButtons(){
+		menuButtons.SetActive (false);
+	}
 
 	public void ShowMulti()
 	{
-		menuButtons.SetActive (false);
+
 		multiPanel.SetActive(true);
 	}
 
 	public void HideMulti()
 	{
 		multiPanel.SetActive(false);
-		menuButtons.SetActive (true);
 	}
 
 

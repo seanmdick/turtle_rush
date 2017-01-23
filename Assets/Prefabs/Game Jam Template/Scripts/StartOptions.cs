@@ -98,6 +98,7 @@ public class StartOptions : MonoBehaviour {
 	public void HideDelayed()
 	{
 		//Hide the main menu UI element after fading out menu for start game in scene
+		showPanels.HideMulti();
 		showPanels.HideMenu();
 	}
 
@@ -131,12 +132,14 @@ public class StartOptions : MonoBehaviour {
 
 	public void ShowMulti()
 	{
+		showPanels.HideMainMenuButtons();
 		showPanels.ShowMulti();
 	}
 
 	public void HideMulti()
 	{
 		showPanels.HideMulti();
+		showPanels.ShowMainMenuButtons();
 	}
 
 	public void PlayNewMusic()
