@@ -11,10 +11,15 @@ public class Crab : MonoBehaviour {
 	private float attackCooldown;
 	public CrabZone cz;
 	private Animator aC;
+	public AudioClip[] sounds;
+	public AudioClip foundsound;
+	private AudioSource aS;
 
 	// Use this for initialization
 	void Start () {
+		aS = GetComponent<AudioSource>();
 		aC = GetComponentInChildren<Animator>();
+		StartCoroutine(gripe());
 	}
 	
 	// Update is called once per frame
@@ -61,6 +66,8 @@ public class Crab : MonoBehaviour {
 
 	public void SetTarget(Vector3 target){
 		if (hasTarget || attackCooldown > 0f) return;
+		aS.pitch =  1f + Random.Range(0.3f,0.6f);
+		aS.PlayOneShot(foundsound);
 		hasTarget = true;
 		moveTarget = target;
 	}
@@ -94,5 +101,12 @@ public class Crab : MonoBehaviour {
 	void turtleHit(Collider col){
 		attackCooldown = maxAttackCooldown;
 		col.attachedRigidbody.AddForce(transform.forward * 10, ForceMode.Impulse);
+	}
+
+	IEnumerator gripe() {
+		yield return new WaitForSeconds(Random.Range(5f, 15f));
+		aS.pitch = 1f + Random.Range(0.3f,0.6f);
+		aS.PlayOneShot(sounds[Random.Range(0,sounds.Length)]);
+		StartCoroutine(gripe());
 	}
 }

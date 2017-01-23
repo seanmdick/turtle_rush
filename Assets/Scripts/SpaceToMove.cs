@@ -24,6 +24,7 @@ public class SpaceToMove : MonoBehaviour {
 	private Vector3 spawnPosition;
 	private bool finished;
 	private int playerNumber;
+	private float idleTimer;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -43,8 +44,10 @@ public class SpaceToMove : MonoBehaviour {
 	void Update() {
 		if (finished)
 			return;
+		idleTimer += Time.deltaTime;
 		moveTimer -= Time.deltaTime;
 		if (Input.GetKey(moveKey) || Input.GetButton("P"+playerNumber+"Move")) {
+			idleTimer = 0f;
 			powerTimer = Mathf.Min(powerTimer + Time.deltaTime, maxPower);
 		}
 		if (powerIndicatorMat != null)
@@ -53,8 +56,14 @@ public class SpaceToMove : MonoBehaviour {
 
 		if (directionIndicator != null)
 			directionIndicator.localRotation = Quaternion.Euler(0f,0f, direction * 45f);
-		if (Input.GetKeyUp(moveKey) || Input.GetButtonUp("P"+playerNumber+"Move"))
+		if (Input.GetKeyUp(moveKey) || Input.GetButtonUp("P"+playerNumber+"Move")) {
+			idleTimer = 0f;
 			moveHit = true;
+		}
+
+		if (idleTimer > 10f) {
+			Respawn();
+		}
 	}
 	
 	// Update is called once per frame
